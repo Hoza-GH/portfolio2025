@@ -70,7 +70,7 @@ body {
 .hero {
     background: var(--background-dark);
     color: var(--text-light);
-    padding: 180px 20px 120px;
+    padding: 180px 20px 0px;
     text-align: center;
 }
 
@@ -107,42 +107,52 @@ body {
 
 /* Project Cards */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .project-card {
-    background: var(--background-card);
-    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    background: #333333;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .project-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    padding: 1.5rem;
 }
 
 .project-info {
-    padding: 24px;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .project-info h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
 }
 
 .project-info p {
-    color: var(--text-secondary);
-    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 /* Skills Grid */
